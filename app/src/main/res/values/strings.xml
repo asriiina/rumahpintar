@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Rumah Pintar</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_video">Video</string>
+    <string name="nav_profile">Profile</string>
+
+    <string name="search">Search</string>
+    <string name="video_pembelajaran">Video Pembelajaran</string>
+    <string name="image_thumbnail_video_pembelajaran">Image Thumbnail Video Pembelajaran</string>
+    <string name="image_play_button">Image Play Button</string>
+    <string name="example_title_cardvideo">Belajar Bahasa Inggris</string>
+    <string name="sd">SD</string>
+    <string name="smp">SMP</string>
+    <string name="sma">SMA</string>
+    <string name="dinas">DINAS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

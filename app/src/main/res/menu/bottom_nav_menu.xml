@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/bottom_home"
+        android:title="@string/nav_home"
+        app:exb_color="#FF8888"/>
+
+    <item
+        android:id="@+id/navigation_video"
+        android:icon="@drawable/bottom_video"
+        android:title="@string/nav_video"
+        app:exb_color="#FF9800"
+        />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/bottom_profile"
+        android:title="@string/nav_profile"
+        app:exb_color="#80CBC4"/>
+
+</menu>
