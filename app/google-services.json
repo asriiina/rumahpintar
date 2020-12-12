@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "64438469025",
+    "project_id": "rumah-pintar-8449c",
+    "storage_bucket": "rumah-pintar-8449c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64438469025:android:0a690019c42dd843868be0",
+        "android_client_info": {
+          "package_name": "com.example.rumahpintar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64438469025-o6g1pkbsng0346jk3ke87u6jfr002afe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-LdidvI-3oeqseY1PNsB7yo7ZbS_cWQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64438469025-o6g1pkbsng0346jk3ke87u6jfr002afe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
