@@ -93,12 +93,12 @@
                     android:id="@+id/rekom1"
                     android:layout_width="192dp"
                     android:layout_height="90dp"
-                    android:src="@drawable/rekomen1" />
+                    android:src="@drawable/home_bannersatu" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="90dp"
-                    android:src="@drawable/video1"
+                    android:src="@drawable/home_bannerdua"
                     />
 
 
