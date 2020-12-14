@@ -34,6 +34,14 @@ class HomeFragment : Fragment() {
 
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        img_math.setOnClickListener {
+            startActivity(Intent(context, DetailActivity::class.java))
+        }
+    }
+
     companion object {
         fun newInstance(param1: String, param2: String) =
             HomeFragment().apply {
