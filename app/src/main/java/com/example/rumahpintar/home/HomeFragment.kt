@@ -1,13 +1,20 @@
 package com.example.rumahpintar.home
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.rumahpintar.R
+import com.example.rumahpintar.video.ListVideoAdapter
+import com.example.rumahpintar.video.model.Video
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_video.*
+
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -16,6 +23,7 @@ class HomeFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
+    private var listVideo: ArrayList<Video> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +40,29 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
 
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val vid1 = Video("English", "https://www.youtube.com/watch?v=teMcwnplFv4", "https://img.youtube.com/vi/teMcwnplFv4/hqdefault.jpg")
+        val vid2 = Video("Indonesia", "https://www.youtube.com/watch?v=m-IH3st1poE", "https://img.youtube.com/vi/m-IH3st1poE/hqdefault.jpg")
+        rv_rekomendasi.layoutManager = GridLayoutManager(context)
+        val listVideoAdapter = ListVideoAdapter()
+
+        listVideo.add(vid1)
+        listVideo.add(vid2)
+        rv_rekomendasi.adapter = listVideoAdapter
+        setOnClickItem(listVideoAdapter)
+        listVideoAdapter.addToListAdapter(listVideo)
+        listVideoAdapter.notifyDataSetChanged()
+    }
+
+    private fun setOnClickItem(listVideoAdapter: ListVideoAdapter) {
+        listVideoAdapter.setOnItemClickCallback(object : ListVideoAdapter.OnItemClickCallback {
+            override fun onItemClick(data: Video) {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(data.linkVideo)))
+            }
+        })
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

@@ -17,37 +17,37 @@
 
 
         //====================== HALO ===================
+
         <RelativeLayout
-            android:layout_weight="1.2"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            >
+            android:layout_height="23dp"
+            android:layout_weight="1.2">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
                 <TextView
                     android:id="@+id/textHalo"
-                    android:text="Halo,"
-                    android:textSize="20sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Halo,"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textNama"
-                    android:text="JOKOWI"
-                    android:textStyle="bold"
-                    android:textSize="30sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="JOKOWI"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -63,67 +63,42 @@
 
         //====================== REKOMENDASI =================
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1.2">
+
+
             <LinearLayout
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:text="Rekomendasi Video"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="20dp"
-                    />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:elevation="8dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="22dp"
-
-                >
-
-                <ImageView
-                    android:id="@+id/rekom1"
-                    android:layout_width="192dp"
-                    android:layout_height="90dp"
-                    android:src="@drawable/home_bannersatu" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:src="@drawable/home_bannerdua"
-                    />
-
-
-            </LinearLayout>
-            <TextView
+            <GridLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VIDEO 1"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_gravity="bottom|left"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="70dp"/>
-            <TextView
+                android:columnCount="2"
+                android:rowCount="1">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_rekomendasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VIDEO 2"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_gravity="right|bottom"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="70dp"
-                />
+                android:layout_margin="10dp"
+                tools:listitem="@layout/item_rekomendasi" />
+            </GridLayout>
+
+        </RelativeLayout>
+        
+
 
         //====================== KELAS ===================
         <GridLayout
@@ -132,7 +107,7 @@
             android:rowCount="3"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false"
-            android:layout_weight="6"
+            android:layout_weight="7"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:padding="10dp"
@@ -145,7 +120,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -162,7 +137,8 @@
                     <ImageView
                         android:id="@+id/img_math"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="75dp"
+                        android:padding="8dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/buku1" />
 
@@ -171,7 +147,7 @@
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -185,7 +161,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -204,14 +180,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/buku2" />
+                        android:src="@drawable/buku2"
+                        android:padding="8dp"/>
 
                     <TextView
                         android:text="IPA"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -225,7 +202,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -242,6 +219,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
+                        android:padding="8dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/buku3" />
 
@@ -267,7 +245,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -286,14 +264,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/buku4" />
+                        android:src="@drawable/buku4"
+                        android:padding="8dp"/>
 
                     <TextView
                         android:text="PENJAS"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -308,7 +287,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -326,14 +305,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/buku5" />
+                        android:src="@drawable/buku5"
+                        android:padding="8dp"/>
 
                     <TextView
                         android:text="Bhs Inggris"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -347,7 +327,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -365,14 +345,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/buku6" />
+                        android:src="@drawable/buku6"
+                        android:padding="8dp"/>
 
                     <TextView
                         android:text="Bhs Indo"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -389,7 +370,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -407,14 +388,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/buku7" />
+                        android:src="@drawable/buku7"
+                        android:padding="8dp"/>
 
                     <TextView
                         android:text="TIK"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -428,7 +410,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.4"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -446,14 +428,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/buku8" />
+                        android:src="@drawable/buku8"
+                        android:padding="8dp"/>
 
                     <TextView
                         android:text="Bhs Jawa"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -467,7 +450,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="2"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="1.2"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -485,7 +468,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/buku9" />
+                        android:src="@drawable/buku9"
+                        android:padding="8dp"/>
 
                     <TextView
                         android:text="AGAMA"
