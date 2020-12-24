@@ -15,11 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RumahPintar.Light">
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".langganan.DetailLanggananActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".auth.RegisterActivity" />
         <activity android:name=".auth.LoginActivity" />
         <activity android:name=".home.DetailActivity" />
-        <activity android:name=".langganan.LanggananActivity"/>
+        <activity android:name=".langganan.LanggananActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

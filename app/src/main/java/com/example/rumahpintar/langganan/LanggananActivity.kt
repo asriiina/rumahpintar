@@ -1,5 +1,6 @@
 package com.example.rumahpintar.langganan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.rumahpintar.langganan.adapter.PackageAdapter
 import com.example.rumahpintar.langganan.model.Package
 import com.example.rumahpintar.R
+import kotlinx.android.synthetic.main.item_package.*
 
 class LanggananActivity : AppCompatActivity() {
 
@@ -17,6 +19,7 @@ class LanggananActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_langganan)
+
 
         val dummyData = arrayListOf<Package.Subscribe>()
         dummyData.add(Package.Subscribe(null, "Matematika Dasar", 12500, 4.5, 90, 1500000))
