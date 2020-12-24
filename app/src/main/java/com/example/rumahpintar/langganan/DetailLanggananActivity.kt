@@ -17,15 +17,13 @@ class DetailLanggananActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_langganan)
-
         showProductDetail()
-
     }
 
     private fun showProductDetail() {
         tv_name.text = intent.getStringExtra(EXTRA_NAME)
-        tv_question.text = intent.getIntExtra(EXTRA_QUESTION, 0).toString()
-        tv_price.text = intent.getIntExtra(EXTRA_PRICE, 0).toString()
+        tv_question.text = intent.getStringExtra(EXTRA_QUESTION)
+        tv_price.text = intent.getStringExtra(EXTRA_PRICE)
     }
 
 

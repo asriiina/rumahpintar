@@ -32,8 +32,8 @@ class PackageAdapter(
         val data = dataset[position]
         holder.bind(data, onItemClickListener)
         holder.namePackageText.text = data.name
-        holder.usersPackageText.text = "${data.users} pengguna"
-        holder.pricePackageButton.text = Currency.intToRupiah(data.price!!)
+        holder.usersPackageText.text = data.users.toString()
+        holder.pricePackageButton.text = data.price
 //        holder.pricePackageButton.setOnClickListener {
 //            Toast.makeText(context, "Ini dari dalam adapter", Toast.LENGTH_SHORT).show()
 //        }
