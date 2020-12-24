@@ -24,7 +24,7 @@
         android:text="Full Name" />
 
     <EditText
-        android:id="@+id/txtName"
+        android:id="@+id/txt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />
@@ -37,7 +37,7 @@
         android:text="Email" />
 
     <EditText
-        android:id="@+id/txtEmail"
+        android:id="@+id/txt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />
@@ -50,21 +50,7 @@
         android:text="Password" />
 
     <EditText
-        android:id="@+id/txtPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
-
-    <TextView
-        android:id="@+id/fifthTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Confirm Password" />
-
-    <EditText
-        android:id="@+id/txtConfirmPwd"
+        android:id="@+id/txt_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

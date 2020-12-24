@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="BAB 2"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:text="Perkalian"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="687dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:justificationMode="inter_word"
+                    android:text='Teman-teman tentunya sudah sering belajar tentang penjumlahan dan pengurangan. Karena itu, kali ini Bobo hanya akan menjelaskan tentang perkalian.  Nah, kalau belajar matematika memang paling mudah jika dijelaskan dengan contoh. Misalnya ada soal seperti berikut:  2 x 3 = ?  Nah, soal perkalian ini bisa diartikan sebagai 3 + 3 yang hasilnya adalah 6. Angka 2 di depan kita anggap sebagai banyaknya angka di belakang yang harus kita jumlahkan.  Atau angka di depan bisa disebut "pengali" dan angka yang di belakang disebung "yang dikali".  Contoh lainnya, 4 x 7 = ?  Soal itu bisa diartikan sebagai  7 + 7 + 7 + 7 = 28.  Jadi kesimpulannya, perkalian adalah penjumlahan yang berulang.  Baca Juga: Permen Karet Menempel di Rambut? Tak Perlu Dipotong, Ikuti 6 Cara Mudah Ini untuk Mengatasinya  Soal  1. Ali mempunyai 6 apel. Ayah memberikan 3 apel lagi kepada Ali, kemudian Ali memberikan 2 apel kepada Edo. Berapa sisa apel Ali sekarang?  Jawab:  Diketahui:  - Ali punya 6 apel  - Ayah memberi 3 apel pada Ali  - Ali membagikan 2 apel pada Edo  Ditanyakan: Sisa apel Ali?  Di sini kita akan menggunakan operasi hitung penjumlahan dan pengurangan.  -> 6 apel + 3 apel - 2 apel = 7 apel  Jadi, apel Ali yang tersisa adalah 7 buah apel.'
+                    android:textSize="20dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

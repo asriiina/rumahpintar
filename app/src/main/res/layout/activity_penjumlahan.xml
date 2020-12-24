@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="BAB 1"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:text="Penjumlahan"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="687dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="Operasi hitung bilangan sendiri di dalamnya termasuk penjumlahan, pengurangan, dan perkalian.
+
+            Untuk teman-teman yang ingin memahami penjumlahan dan pengurangan dapat menggunakan sebuah gambar.
+
+            Contohnya teman-teman ingin menghitung 5-2.
+
+            Teman-teman bisa gambar 5 buah lingkaran terlebih dahulu, karena pengurangan maka coretlah 2 lingkaran.
+
+            Ya, lingkaran yang tidak tercoret merupakan jawaban dari pengurangan tersebut.
+
+            Sama dengan menghitung penjumlahan, teman-teman juga bisa menggunakan gambar.
+
+            Contohnya teman-teman ingin menghitung 5+2.
+
+            Teman-teman bisa menggambar 5 buah lingkaran, karena penjumlahan maka gambarlah lingkaran tambahan sebanyak 2 buah.
+
+            Ya, kini teman-teman memiliki 7 buah lingkaran yang artinya 5+2=7."
+                    android:textSize="20dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

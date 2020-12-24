@@ -11,20 +11,19 @@
         android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_margin="24dp"
-        android:text="Setting"
+        android:text="Profil"
         android:textSize="24sp"
-
         />
 
 
     <LinearLayout
-        android:layout_below="@id/tvProfile"
         android:id="@+id/lnrProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvProfile"
         android:orientation="vertical"
         android:padding="24dp">
 
@@ -35,21 +34,21 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imgInfo"
+                android:id="@+id/img_edit"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/custom_bg_pengaturan"
                 android:padding="16dp"
-                android:src="@drawable/setting_icon_pengaturan" />
+                android:src="@drawable/profile_setting" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/imgInfo"
+                android:layout_toEndOf="@id/img_edit"
                 android:gravity="center"
-                android:text="Edit Profil"
+                android:text="@string/profil_edit"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -70,21 +69,56 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imgKelompok"
+                android:id="@+id/img_langganan"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/custom_bg_pengaturan"
                 android:padding="16dp"
-                android:src="@drawable/setting_icon_langganan" />
+                android:src="@drawable/profile_langganan" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/imgKelompok"
+                android:layout_toEndOf="@id/img_langganan"
                 android:gravity="center"
-                android:text="Langganan"
+                android:text="@string/profil_langganan"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_icon_arrow_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/custom_bg_pengaturan"
+                android:padding="16dp"
+                android:src="@drawable/profile_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/img_logout"
+                android:gravity="center"
+                android:text="@string/profil_logout"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 

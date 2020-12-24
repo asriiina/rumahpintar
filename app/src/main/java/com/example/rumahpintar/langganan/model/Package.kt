@@ -7,7 +7,7 @@ object Package {
         var name: String? = null,
         var users: Int? = null,
         var rate: Double? = null,
-        var question: Int? = null,
-        var price: Int? = null
+        var question: String? = null,
+        var price: String? = null
     )
 }

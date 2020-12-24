@@ -1,6 +1,8 @@
 package com.example.rumahpintar.home
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,9 +12,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.rumahpintar.R
 import com.example.rumahpintar.home.GridVideoAdapter
+import com.example.rumahpintar.home.detail.DetailMatematikaActivity
 import com.example.rumahpintar.home.model.Video
 import kotlinx.android.synthetic.main.fragment_home.*
-
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -22,6 +24,7 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private var listVideo: ArrayList<Video> = arrayListOf()
+    private lateinit var preferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +56,19 @@ class HomeFragment : Fragment() {
         setOnClickItem(gridVideoAdapter)
         gridVideoAdapter.addToListAdapter(listVideo)
         gridVideoAdapter.notifyDataSetChanged()
+
+        img_math.setOnClickListener {
+            startActivity(Intent(context, DetailActivity::class.java))
+        }
+
+        cv_matematika.setOnClickListener{
+            startActivity(Intent(context, DetailMatematikaActivity::class.java))
+        }
+
+        preferences = requireActivity().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+
+        val email = preferences.getString("EMAIL", "")
+        textNama.text = email
     }
 
     private fun setOnClickItem(listVideoAdapter: GridVideoAdapter) {
@@ -62,15 +78,6 @@ class HomeFragment : Fragment() {
             }
         })
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        img_math.setOnClickListener {
-            startActivity(Intent(context, DetailActivity::class.java))
-        }
-    }
-
 
     companion object {
         fun newInstance(param1: String, param2: String) =

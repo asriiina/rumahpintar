@@ -1,5 +1,3 @@
-
-
 package com.example.rumahpintar.langganan
 
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +6,7 @@ import android.os.CountDownTimer
 import com.example.rumahpintar.R
 import kotlinx.android.synthetic.main.activity_pembayaran.*
 
-class DetailLanggananActivity : AppCompatActivity() {
+class PembayaranActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

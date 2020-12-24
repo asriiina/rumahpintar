@@ -42,42 +42,11 @@ class VideoFragment : Fragment() {
         val vid2 = Video("Indonesia", "https://www.youtube.com/watch?v=m-IH3st1poE", "https://img.youtube.com/vi/m-IH3st1poE/hqdefault.jpg")
         rv_videos.layoutManager = LinearLayoutManager(activity)
         val listVideoAdapter = ListVideoAdapter()
-        if (chip_cat_sd.isChecked) {
-            chip_cat_sd.isActivated = false
-            listVideo.clear()
-            listVideo.add(vid1)
-            listVideo.add(vid2)
-            listVideoAdapter.addToListAdapter(listVideo)
-            listVideoAdapter.notifyDataSetChanged()
-        }
-        cg_category_video.setOnCheckedChangeListener { group, checkedId ->
-            if (checkedId == R.id.chip_cat_sd) {
-                chip_cat_sd.isActivated = false
-                listVideo.clear()
-                listVideo.add(vid1)
-                listVideo.add(vid2)
-                listVideoAdapter.addToListAdapter(listVideo)
-                listVideoAdapter.notifyDataSetChanged()
-            } else if (checkedId == R.id.chip_cat_smp) {
-                chip_cat_smp.isActivated = false
-                listVideo.clear()
-                listVideo.add(vid2)
-                listVideoAdapter.addToListAdapter(listVideo)
-                listVideoAdapter.notifyDataSetChanged()
-            } else if (checkedId == R.id.chip_cat_sma) {
-                chip_cat_sma.isActivated = false
-                listVideo.clear()
-                listVideoAdapter.addToListAdapter(listVideo)
-                listVideoAdapter.notifyDataSetChanged()
-            } else if (checkedId == R.id.chip_cat_dinas) {
-                chip_cat_dinas.isActivated = false
-                listVideo.clear()
-                listVideo.add(vid1)
-                listVideoAdapter.addToListAdapter(listVideo)
-                listVideoAdapter.notifyDataSetChanged()
-            }
-        }
         rv_videos.adapter = listVideoAdapter
+        listVideo.add(vid1)
+        listVideo.add(vid2)
+        listVideoAdapter.addToListAdapter(listVideo)
+        listVideoAdapter.notifyDataSetChanged()
         setOnClickItem(listVideoAdapter)
     }
 
