@@ -6,26 +6,22 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.rumahpintar.R
-import com.example.rumahpintar.video.model.Video
+import com.example.rumahpintar.home.model.Video
 import kotlinx.android.synthetic.main.item_vidcategory.view.*
 
-class ListVideoAdapter() :
-        RecyclerView.Adapter<ListVideoAdapter.MyViewHolder>() {
+class GridVideoAdapter() :
+    RecyclerView.Adapter<GridVideoAdapter.GridViewHolder>() {
 
     var listVideo = arrayListOf<Video>()
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder.
-    // Each data item is just a string in this case that is shown in a TextView.
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(video: Video) {
             with(itemView) {
                 Glide.with(this)
-                        .load(video.linkThumbnail)
-                        .override(300, 150)
-                        .into(iv_thumbnail_video)
+                    .load(video.linkThumbnail)
+                    .override(300, 150)
+                    .into(iv_thumbnail_video)
                 tv_title_carditem.text = video.nama
             }
         }
@@ -41,17 +37,19 @@ class ListVideoAdapter() :
     }
 
     // Create new views (invoked by the layout manager)
-    override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): ListVideoAdapter.MyViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): GridVideoAdapter.GridViewHolder {
         // create a new view
         val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_vidcategory, parent, false)
+            .inflate(R.layout.item_vidcategory, parent, false)
         // set the view's size, margins, paddings and layout parameters
-        return MyViewHolder(view)
+        return GridViewHolder(view)
     }
 
     // Replace the contents of a view (invoked by the layout manager)
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: GridViewHolder, position: Int) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.bind(listVideo[position])
