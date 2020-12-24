@@ -1,85 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".langganan.DetailLanggananActivity">
-
-<LinearLayout
-    android:id="@+id/linearLayout"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:layout_marginTop="44dp"
-    android:layout_marginEnd="8dp"
-    android:orientation="vertical"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".langganan.DetailLanggananActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll_detailbayar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Detail Pembayaran" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Matematika Dasar"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Fasilitas"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="25 video" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="90 Soal Latihan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Sertifikat" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="8 Pertemuan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Durasi"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="90 Menit / Pertemuan" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_carabayar"
+        android:layout_width="390dp"
+        android:layout_height="197dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:layout_below="@id/ll_detailbayar">
+
+        <RadioButton
+            android:id="@+id/OVO"
+            android:layout_width="155dp"
+            android:layout_height="36dp"
+            android:text="OVO"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="110dp" />
+
+        <RadioButton
+            android:id="@+id/BANK"
+            android:layout_width="155dp"
+            android:layout_height="34dp"
+            android:text="BANK"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="275dp" />
+
+        <RadioButton
+            android:id="@+id/GOPAY"
+            android:layout_width="155dp"
+            android:layout_height="35dp"
+            android:text="GOPAY"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="168dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Detail Pembayaran" />
+        android:layout_below="@id/ll_carabayar">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Matematika Dasar"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fasilitas"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:textColor="@color/black"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="25 video"
-        android:layout_marginLeft="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true">
 
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="16sp" />
 
-<LinearLayout
-    android:layout_width="390dp"
-    android:layout_height="197dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 150.000"
+                android:textSize="20sp"/>
 
-    android:layout_marginBottom="16dp"
-    android:orientation="vertical"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        </LinearLayout>
 
-    <RadioButton
-        android:id="@+id/OVO"
-        android:layout_width="155dp"
-        android:layout_height="69dp"
-        android:text="RadioButton"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="110dp" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="BAYAR"
+            android:layout_alignParentEnd="true"
+            />
 
-    <RadioButton
-        android:id="@+id/BANK"
-        android:layout_width="155dp"
-        android:layout_height="69dp"
-        android:text="RadioButton"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="275dp" />
 
-    <RadioButton
-        android:id="@+id/GOPAY"
-        android:layout_width="155dp"
-        android:layout_height="69dp"
-        android:text="RadioButton"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="168dp" />
-</LinearLayout>
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
