@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PembayaranActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Detail Pembayaran" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Matematika Dasar"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="197dp"
+
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <RadioButton
+            android:id="@+id/OVO"
+            android:layout_width="155dp"
+            android:layout_height="69dp"
+            android:text="RadioButton"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="110dp" />
+
+        <RadioButton
+            android:id="@+id/BANK"
+            android:layout_width="155dp"
+            android:layout_height="69dp"
+            android:text="RadioButton"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="275dp" />
+
+        <RadioButton
+            android:id="@+id/GOPAY"
+            android:layout_width="155dp"
+            android:layout_height="69dp"
+            android:text="RadioButton"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="168dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
