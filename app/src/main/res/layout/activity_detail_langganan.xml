@@ -40,11 +40,6 @@
             android:textColor="@color/black"
             android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,7 +58,6 @@
                 android:layout_marginStart="10dp"
                 android:text="Sertifikat" />
 
-        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:text="Durasi"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -121,6 +116,22 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="43dp"
             tools:layout_editor_absoluteY="168dp" />
+        <RadioButton
+            android:id="@+id/DANA"
+            android:layout_width="155dp"
+            android:layout_height="35dp"
+            android:text="DANA"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="168dp" />
+        <RadioButton
+            android:id="@+id/SHOPEEPAY"
+            android:layout_width="155dp"
+            android:layout_height="35dp"
+            android:text="SHOPEEPAY"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="168dp" />
     </LinearLayout>
 
     <RelativeLayout
@@ -154,7 +165,6 @@
             android:text="BAYAR"
             android:layout_alignParentEnd="true"
             />
-
 
     </RelativeLayout>
 
