@@ -25,8 +25,6 @@ class RegisterActivity : AppCompatActivity() {
             val password = txt_password.text.toString()
             val editor: SharedPreferences.Editor = sharedPreferences.edit()
 
-
-
             startActivity(Intent(this@RegisterActivity, MainActivity::class.java))
             finish()
         }

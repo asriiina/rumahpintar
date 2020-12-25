@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RumahPintar.Light">
-        <activity android:name=".GagalActivity"></activity>
+        <activity android:name=".GagalActivity"/>
+        <activity android:name=".profile.SettingsActivity"/>
         <activity android:name=".SuksesActivity" />
         <activity android:name=".home.detail.PenjumlahanActivity" />
         <activity android:name=".langganan.DetailLanggananActivity" />

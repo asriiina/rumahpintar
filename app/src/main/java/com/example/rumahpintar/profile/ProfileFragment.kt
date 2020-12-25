@@ -43,16 +43,16 @@ class ProfileFragment : Fragment() {
 
         preferences = requireActivity().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
-        setting_langganan.setOnClickListener {
-            startActivity(Intent(context, LanggananActivity::class.java))
-        }
-
         setting_logout.setOnClickListener {
             val editor: SharedPreferences.Editor = preferences.edit()
             editor.clear()
             editor.apply()
 
             startActivity(Intent(context, LoginActivity::class.java))
+        }
+
+        setting_edit_profil.setOnClickListener {
+            startActivity(Intent(context, SettingsActivity::class.java))
         }
     }
 

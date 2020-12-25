@@ -37,7 +37,6 @@ class LanggananActivity : AppCompatActivity() {
         
         adapterPackage.setOnItemClickListener(object : PackageAdapter.OnItemClickListener {
             override fun onItemClick(model: Package.Subscribe) {
-                Toast.makeText(this@LanggananActivity, "${model.name}", Toast.LENGTH_SHORT).show()
                 val manageDetailIntent = Intent(this@LanggananActivity, DetailLanggananActivity::class.java)
                     .apply {
                         putExtra(DetailLanggananActivity.EXTRA_NAME, model.name)
