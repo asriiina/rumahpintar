@@ -33,7 +33,6 @@ class PackageAdapter(
         holder.bind(data, onItemClickListener)
         holder.namePackageText.text = data.name
         holder.usersPackageText.text = "${data.users} pengguna"
-        holder.pricePackageButton.text = Currency.intToRupiah(data.price!!)
 //        holder.pricePackageButton.setOnClickListener {
 //            Toast.makeText(context, "Ini dari dalam adapter", Toast.LENGTH_SHORT).show()
 //        }

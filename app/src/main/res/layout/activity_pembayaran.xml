@@ -8,15 +8,16 @@
 
     <TextView
         android:id="@+id/count"
-        android:layout_width="136dp"
-        android:layout_height="76dp"
+        android:layout_width="338dp"
+        android:layout_height="61dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="336dp"
-        android:text=""
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="30"
         android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -30,6 +31,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintVertical_bias="0.893" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="187dp"
+        android:layout_height="226dp"
+        android:layout_marginBottom="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_jampasir" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
