@@ -55,9 +55,6 @@ class ListVideoAdapter() :
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.bind(listVideo[position])
-//        holder.itemView.setOnClickListener {
-//            onItemClickCallback.onItemClick(listVideo[holder.adapterPosition])
-//        }
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClick(listVideo[holder.adapterPosition])
         }
