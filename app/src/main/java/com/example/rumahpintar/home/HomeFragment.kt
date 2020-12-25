@@ -67,8 +67,8 @@ class HomeFragment : Fragment() {
 
         preferences = requireActivity().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
-        val email = preferences.getString("EMAIL", "")
-        textNama.text = email
+        val name = preferences.getString("NAME", "")
+        textNama.text = name
     }
 
     private fun setOnClickItem(listVideoAdapter: GridVideoAdapter) {
