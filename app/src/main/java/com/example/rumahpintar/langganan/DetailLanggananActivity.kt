@@ -12,6 +12,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.rumahpintar.MainActivity
 import com.example.rumahpintar.R
+import com.example.rumahpintar.SuksesActivity
 import kotlinx.android.synthetic.main.activity_detail_langganan.*
 
 class DetailLanggananActivity : AppCompatActivity() {
@@ -33,7 +34,7 @@ class DetailLanggananActivity : AppCompatActivity() {
         createNotificationChannel()
 
         val notificationManager = NotificationManagerCompat.from(this)
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, SuksesActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent,0)
 
         btn_bayar.setOnClickListener {
@@ -47,6 +48,8 @@ class DetailLanggananActivity : AppCompatActivity() {
                 .build()
 
             notificationManager.notify(NOTIFICATION_ID, notification)
+
+            startActivity(Intent(this, PembayaranActivity::class.java))
         }
     }
 

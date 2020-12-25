@@ -166,7 +166,6 @@
             android:id="@+id/btn_bayar"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/bayar"
             android:text="BAYAR"
             android:layout_alignParentEnd="true"
             />

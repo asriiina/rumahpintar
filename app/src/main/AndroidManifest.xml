@@ -15,10 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RumahPintar.Light">
-        <activity android:name=".home.detail.PenjumlahanActivity"/>
-        <activity android:name=".langganan.DetailLanggananActivity"/>
+        <activity android:name=".GagalActivity"></activity>
+        <activity android:name=".SuksesActivity" />
+        <activity android:name=".home.detail.PenjumlahanActivity" />
+        <activity android:name=".langganan.DetailLanggananActivity" />
         <activity android:name=".home.detail.DetailMatematikaActivity" />
-        <activity android:name=".langganan.PembayaranActivity"/>
+        <activity android:name=".langganan.PembayaranActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".auth.RegisterActivity" />
         <activity android:name=".auth.LoginActivity" />
