@@ -91,7 +91,9 @@
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
         android:layout_below="@id/ll_detailbayar">
-
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
         <RadioButton
             android:id="@+id/OVO"
             android:layout_width="155dp"
@@ -134,6 +136,7 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="43dp"
             tools:layout_editor_absoluteY="168dp" />
+    </RadioGroup>
     </LinearLayout>
 
     <RelativeLayout
