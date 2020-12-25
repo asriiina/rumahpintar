@@ -42,22 +42,5 @@ class PembayaranActivity : AppCompatActivity() {
             bgthread!!.start()
         }
 
-        // inner class MyCounter(millisInFuture: Long, countDownInterval: Long) : CountDownTimer(millisInFuture, countDownInterval) {
-
-
-        //   override fun onFinish() {
-        //        println("Waktu Habis")
-        //      count.text = "Waktu Habis"
-        // }
-
-        // override fun onTick(millisUntilFinished: Long) {
-        //   count.textSize = 50f
-
-        // count.text = (millisUntilFinished / 1000).toString() + ""
-        //  println("Timer  : " + millisUntilFinished / 1000)
-//        }
-        //  }
-
-
     }
 }

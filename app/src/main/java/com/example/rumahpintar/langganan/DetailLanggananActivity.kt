@@ -31,8 +31,6 @@ class DetailLanggananActivity : AppCompatActivity() {
             object : BiometricPrompt.AuthenticationCallback() {
 
                 val notificationManager = NotificationManagerCompat.from(this@DetailLanggananActivity)
-                val intent = Intent(this@DetailLanggananActivity, SuksesActivity::class.java)
-                val pendingIntent = PendingIntent.getActivity(this@DetailLanggananActivity, 0, intent, 0)
 
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
                     super.onAuthenticationError(errorCode, errString)
@@ -46,13 +44,13 @@ class DetailLanggananActivity : AppCompatActivity() {
                         .setContentTitle("Notifikasi Pembayaran")
                         .setContentText("Pembayaran Berhasil")
                         .setSmallIcon(R.drawable.notif_payment)
-                        .setContentIntent(pendingIntent)
                         .setAutoCancel(true)
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
                         .build()
                     notificationManager.notify(NOTIFICATION_ID, notification)
 
                     startActivity(Intent(this@DetailLanggananActivity, SuksesActivity::class.java))
+                    finish()
                 }
             }
 
@@ -94,6 +92,7 @@ class DetailLanggananActivity : AppCompatActivity() {
             )
 
             startActivity(Intent(this@DetailLanggananActivity, PembayaranActivity::class.java))
+            finish()
         }
     }
 
