@@ -13,6 +13,7 @@ class SuksesActivity : AppCompatActivity() {
 
         btn_home.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 

@@ -31,6 +31,7 @@ class PembayaranActivity : AppCompatActivity() {
                         findViewById<TextView> (R.id.count).setText(i.toString())
                         if (i == 0){
                             startActivity(Intent(this, GagalActivity::class.java))
+                            finish()
                         }
                     }
                 } catch (e: InterruptedException) {

@@ -13,6 +13,7 @@ class GagalActivity : AppCompatActivity() {
 
         btn_kembali.setOnClickListener {
             startActivity(Intent(this, LanggananActivity::class.java))
+            finish()
         }
     }
 }

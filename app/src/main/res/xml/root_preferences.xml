@@ -3,22 +3,9 @@
 
     <PreferenceCategory app:title="@string/setting_header">
 
-<!--        <EditTextPreference-->
-<!--            app:key="signature"-->
-<!--            app:title="@string/signature_title"-->
-<!--            app:useSimpleSummaryProvider="true" />-->
-
-<!--        <ListPreference-->
-<!--            app:defaultValue="reply"-->
-<!--            app:entries="@array/reply_entries"-->
-<!--            app:entryValues="@array/reply_values"-->
-<!--            app:key="reply"-->
-<!--            app:title="@string/reply_title"-->
-<!--            app:useSimpleSummaryProvider="true" />-->
-
         <Preference
             app:key="langganan"
-            app:summary="Click to start an activity"
+            app:summary="Klik untuk mulai berlangganan"
             app:title="Langganan">
 
             <intent
