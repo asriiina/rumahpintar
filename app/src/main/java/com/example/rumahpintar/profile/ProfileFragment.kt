@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.example.rumahpintar.R
 import com.example.rumahpintar.auth.LoginActivity
 import com.example.rumahpintar.langganan.LanggananActivity
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 private const val ARG_PARAM1 = "param1"
@@ -44,9 +45,7 @@ class ProfileFragment : Fragment() {
         preferences = requireActivity().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
         setting_logout.setOnClickListener {
-            val editor: SharedPreferences.Editor = preferences.edit()
-            editor.clear()
-            editor.apply()
+            FirebaseAuth.getInstance().signOut()
 
             startActivity(Intent(context, LoginActivity::class.java))
         }

@@ -47,11 +47,14 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference-ktx:1.1.1'
+    // [START gradle_firebase_ui_auth]
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
+    implementation "com.firebaseui:firebase-ui-auth:7.1.1"
+
 
     //Firebase
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-database:19.5.1'
     implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:20.0.4'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
